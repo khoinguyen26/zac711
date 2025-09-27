@@ -2,13 +2,13 @@ import type { Component } from "solid-js";
 import { copyToClipboard } from "../../../utils/clipboard";
 
 interface ContactCommandProps {
-  showToast?: (message: string, type?: 'success' | 'error') => void;
+  showToast?: (message: string, type?: "success" | "error") => void;
 }
 
 export const ContactCommand: Component<ContactCommandProps> = (props) => {
   const handleEmailClick = async () => {
     if (!props.showToast) return;
-    
+
     const result = await copyToClipboard("khoi.work@gmail.com");
     props.showToast(result.message, result.success ? "success" : "error");
   };
@@ -38,7 +38,14 @@ export const ContactCommand: Component<ContactCommandProps> = (props) => {
       </a>
       <br />
       🐙 GitHub:{" "}
-      <span class="contact-link">https://github.com/khoinguyen26</span>
+      <a
+        href="https://github.com/khoinguyen26"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-link"
+      >
+        khoinguyen26
+      </a>
       <br />
       📱 X:{" "}
       <a
