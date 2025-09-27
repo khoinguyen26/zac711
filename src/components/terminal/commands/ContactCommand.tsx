@@ -9,7 +9,7 @@ export const ContactCommand: Component<ContactCommandProps> = (props) => {
   const handleEmailClick = async () => {
     if (!props.showToast) return;
 
-    const result = await copyToClipboard("khoi.work@gmail.com");
+    const result = await copyToClipboard("khoi.work261101@gmail.com");
     props.showToast(result.message, result.success ? "success" : "error");
   };
 
@@ -24,7 +24,7 @@ export const ContactCommand: Component<ContactCommandProps> = (props) => {
         onClick={handleEmailClick}
         title="Click to copy email address"
       >
-        khoi.work@gmail.com
+        khoi.work261101@gmail.com
       </span>
       <br />
       💼 LinkedIn:{" "}
